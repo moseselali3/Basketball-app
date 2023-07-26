@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>  
+
+<VBox fx:controller="controller.RecordController"  styleClass="background" alignment="CENTER" prefHeight="300" prefWidth="500" spacing="20" xmlns:fx="http://javafx.com/fxml/1" >
+
+    <Label fx:id="seasonRecordTitle" text="Season Record" style="-fx-font-size: 25px;" alignment="TOP_CENTER"/>
+
+    <GridPane alignment="CENTER">
+        <TableView  GridPane.columnIndex="0" GridPane.rowIndex="0" prefHeight="200" prefWidth="500">
+        <columns>
+            <TableColumn fx:id="roundTxt" text="Round" prefWidth="125"  />
+            <TableColumn fx:id="gameTxt" text="Game" prefWidth="125" />
+            <TableColumn fx:id="winningTeamTxt" text="Winning Team" prefWidth="125" />
+            <TableColumn fx:id="losingTeamTxt" text="Losing Team" prefWidth="125" />
+        </columns>
+        </TableView>
+
+    </GridPane>
+
+    <Button  fx:id = "closeButton"  text ="close"  GridPane.columnIndex="2" GridPane.rowIndex="1" onAction="#exit" />
+
+
+
+
+
+
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+</VBox>

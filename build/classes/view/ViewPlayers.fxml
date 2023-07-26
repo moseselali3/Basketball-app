@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+
+<VBox fx:controller="controller.ViewPlayersController2" alignment="TOP_CENTER" styleClass="background" prefHeight="725" prefWidth="1000" spacing="20" xmlns:fx="http://javafx.com/fxml/1" >
+
+
+
+    <children>
+        <Label fx:id="allPlayerTitle" text="All Players" style="-fx-font-size: 25px;" />
+
+
+    <TableView fx:id="tableView" >
+        <columns>
+            <TableColumn fx:id="teamName" text="Team" prefWidth="160"  />
+            <TableColumn fx:id="playerName" text="Player Name" prefWidth="160" />
+            <TableColumn fx:id="playerCredit" text="Player Credit" prefWidth="160" />
+            <TableColumn fx:id="playerAge" text="Player Age" prefWidth="160" />
+            <TableColumn fx:id="playerNo" text="Player No" prefWidth="160" />
+            <TableColumn fx:id="playerLevel" text="Player Level" prefWidth="165" />
+        </columns>
+
+
+    </TableView>
+
+
+
+        <GridPane alignment="CENTER"   >
+            <Label fx:id="filter" text="Filter" style="-fx-font-size: 25px;" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+            <Label fx:id="filterLevel" text="Filter By Level:"  GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <TextField fx:id = "filterLevelTF" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="filterName" text=" Filter By Name:"  GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+            <TextField fx:id = "filterNameTF" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label fx:id="filterAge" text="Filter By Age:"  GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+            <Label fx:id="fromAge" text="From:"  GridPane.columnIndex="0" GridPane.rowIndex="3" style="-fx-padding: 0 0 0 50;"/>
+            <TextField fx:id = "fromAgeTF" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="toAge" text=" To:"  GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+            <TextField fx:id = "toAgeTF" GridPane.columnIndex="3" GridPane.rowIndex="3"/>
+            <Button  fx:id = "closeButton"  text ="Close"  GridPane.columnIndex="2" GridPane.rowIndex="4" onAction="#exit"/>
+
+
+        </GridPane>
+    </children>
+
+
+
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+
+
+
+</VBox>

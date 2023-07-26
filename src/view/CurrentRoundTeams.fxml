@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>  
+
+<VBox fx:controller="controller.CurrentRoundTeamsController" styleClass="background"  alignment="CENTER" prefHeight="300" prefWidth="400" spacing="20" xmlns:fx="http://javafx.com/fxml/1" >
+
+    <Label fx:id="allPlayerTitle" text="Round." style="-fx-font-size: 25px;" alignment="TOP_CENTER"/>
+
+
+    <GridPane alignment="CENTER">
+        <TableView GridPane.columnIndex="1" GridPane.rowIndex="0">
+        <columns>
+            <TableColumn fx:id="team1" text="Team...." prefWidth="100"/>
+            <TableColumn fx:id="empty" text="" prefWidth="100" />
+            <TableColumn fx:id="team2" text="Team...." prefWidth="100"/>
+        </columns>
+        </TableView>
+
+
+    </GridPane>
+
+    <Button fx:id="closeButton" text="Close" GridPane.columnIndex="1" GridPane.rowIndex="1" onAction="#exit"  />
+    <VBox minHeight="2">
+
+    </VBox>
+
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+</VBox>

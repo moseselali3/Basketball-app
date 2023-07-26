@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.geometry.Insets?>
+<VBox fx:controller="controller.SeasonController" alignment="TOP_CENTER" styleClass="background" prefHeight="450" prefWidth="350.0" spacing="20" xmlns:fx="http://javafx.com/fxml/1">
+
+
+    <children>
+    <ImageView fx:id ="nbaImage" fitHeight="150" fitWidth="350"  >
+        <image>
+            <Image url ="@/view/NBA_Back.jpg" />
+        </image>
+    </ImageView>
+    </children>
+    <GridPane alignment="CENTER"  vgap="30" >
+
+    <Button  fx:id = "round"  text ="Round"  GridPane.columnIndex="1" GridPane.rowIndex="0" onAction="#arrangeRound"/>
+    <Button  fx:id = "current"  text ="Current" GridPane.columnIndex="1" GridPane.rowIndex="1" onAction="#showCurrentRound"/>
+    <Button  fx:id = "game"  text ="Game" GridPane.columnIndex="1" GridPane.rowIndex="2" onAction="#showGameResults"/>
+    <Button  fx:id = "result"  text ="Result" GridPane.columnIndex="1" GridPane.rowIndex="3" onAction="#seasonResults"/>
+    <Button  fx:id = "close"  text ="Close" GridPane.columnIndex="1" GridPane.rowIndex="4" onAction="#exit"/>
+
+
+
+</GridPane>
+
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+
+    <padding>
+        <Insets top="0" right="0" bottom="15" left="0" />
+    </padding>
+
+</VBox>
